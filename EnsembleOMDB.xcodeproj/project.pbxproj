@@ -11,6 +11,10 @@
 		DDDA2D892C517B0B00F8BB10 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDA2D882C517B0B00F8BB10 /* ContentView.swift */; };
 		DDDA2D8B2C517B0F00F8BB10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDDA2D8A2C517B0F00F8BB10 /* Assets.xcassets */; };
 		DDDA2D8E2C517B0F00F8BB10 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDDA2D8D2C517B0F00F8BB10 /* Preview Assets.xcassets */; };
+		DDDA2D952C517BE800F8BB10 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDA2D942C517BE800F8BB10 /* Movie.swift */; };
+		DDDA2D972C517C1B00F8BB10 /* OMDBClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDA2D962C517C1B00F8BB10 /* OMDBClient.swift */; };
+		DDDA2D9C2C51CD1C00F8BB10 /* MovieCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDA2D9B2C51CD1C00F8BB10 /* MovieCard.swift */; };
+		DDDA2DA02C51F4BB00F8BB10 /* MovieListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDA2D9F2C51F4BB00F8BB10 /* MovieListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,11 @@
 		DDDA2D882C517B0B00F8BB10 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DDDA2D8A2C517B0F00F8BB10 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DDDA2D8D2C517B0F00F8BB10 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DDDA2D942C517BE800F8BB10 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		DDDA2D962C517C1B00F8BB10 /* OMDBClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMDBClient.swift; sourceTree = "<group>"; };
+		DDDA2D9A2C51C08600F8BB10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		DDDA2D9B2C51CD1C00F8BB10 /* MovieCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCard.swift; sourceTree = "<group>"; };
+		DDDA2D9F2C51F4BB00F8BB10 /* MovieListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +60,12 @@
 		DDDA2D852C517B0B00F8BB10 /* EnsembleOMDB */ = {
 			isa = PBXGroup;
 			children = (
+				DDDA2D9A2C51C08600F8BB10 /* Info.plist */,
 				DDDA2D862C517B0B00F8BB10 /* EnsembleOMDBApp.swift */,
-				DDDA2D882C517B0B00F8BB10 /* ContentView.swift */,
+				DDDA2DA22C51F8B000F8BB10 /* Network */,
+				DDDA2D9D2C51F24A00F8BB10 /* Model */,
+				DDDA2D9E2C51F25F00F8BB10 /* View */,
+				DDDA2DA12C51F87300F8BB10 /* View Model */,
 				DDDA2D8A2C517B0F00F8BB10 /* Assets.xcassets */,
 				DDDA2D8C2C517B0F00F8BB10 /* Preview Content */,
 			);
@@ -65,6 +78,39 @@
 				DDDA2D8D2C517B0F00F8BB10 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DDDA2D9D2C51F24A00F8BB10 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DDDA2D942C517BE800F8BB10 /* Movie.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DDDA2D9E2C51F25F00F8BB10 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DDDA2D882C517B0B00F8BB10 /* ContentView.swift */,
+				DDDA2D9B2C51CD1C00F8BB10 /* MovieCard.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DDDA2DA12C51F87300F8BB10 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				DDDA2D9F2C51F4BB00F8BB10 /* MovieListViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		DDDA2DA22C51F8B000F8BB10 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				DDDA2D962C517C1B00F8BB10 /* OMDBClient.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +183,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDDA2D972C517C1B00F8BB10 /* OMDBClient.swift in Sources */,
+				DDDA2D9C2C51CD1C00F8BB10 /* MovieCard.swift in Sources */,
 				DDDA2D892C517B0B00F8BB10 /* ContentView.swift in Sources */,
 				DDDA2D872C517B0B00F8BB10 /* EnsembleOMDBApp.swift in Sources */,
+				DDDA2D952C517BE800F8BB10 /* Movie.swift in Sources */,
+				DDDA2DA02C51F4BB00F8BB10 /* MovieListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +325,7 @@
 				DEVELOPMENT_TEAM = 3SXDZ2G37Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EnsembleOMDB/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -304,6 +355,7 @@
 				DEVELOPMENT_TEAM = 3SXDZ2G37Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EnsembleOMDB/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
